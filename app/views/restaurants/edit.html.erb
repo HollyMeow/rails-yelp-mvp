@@ -1,2 +1,17 @@
-<h1>Restaurants#edit</h1>
-<p>Find me in app/views/restaurants/edit.html.erb</p>
+<h2>Modifier le restaurant <%= @restaurant.name %></h2>
+
+<hr>
+<%= simple_form_for @restaurant do |r| %>
+  <%= r.input :name %>
+  <%= r.input :address %>
+  <%= r.input :phone %>
+  <%= r.input :category, collection: Restaurant::CATEGORIES %>
+  <%= r.button :submit, class: 'btn-success btn-block' %>
+<% end %>
+<hr>
+
+<style type="text/css">
+  .form-group {
+    margin-bottom: 2em;
+  }
+</style>

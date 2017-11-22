@@ -1,2 +1,18 @@
-<h1>Restaurants#new</h1>
-<p>Find me in app/views/restaurants/new.html.erb</p>
+<h2>Add a Restaurant</h2>
+
+<hr>
+<%= simple_form_for @restaurant do |r| %>
+  <%= r.input :name %>
+  <%= r.input :address %>
+  <%= r.input :phone %>
+  <%= r.input :category, collection: Restaurant::CATEGORIES %>
+  <%= r.button :submit, class: 'btn-success btn-block' %>
+<% end %>
+<hr>
+
+
+<style type="text/css">
+  .form-group {
+    margin-bottom: 2em;
+  }
+</style>

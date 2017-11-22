@@ -9,7 +9,8 @@ class Restaurant < ApplicationRecord
   validates_associated :reviews
 
   # A restaurant must have at least a name and an address
-  validates :name && :address, presence: true
+  validates :name, presence: true
+  validates :address, presence: true
 
   # the category should be a fixed list
   validates :category, inclusion: { in: CATEGORIES }

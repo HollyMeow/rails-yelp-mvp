@@ -22,7 +22,7 @@ restaurants_attributes = [
     name: "EL BAMBINO",
     address: "103 rue d'elise 75008 Paris",
     phone:  "0600000000",
-    category: "italien"
+    category: "italian"
   },
   {
     name: "ITATUMI",

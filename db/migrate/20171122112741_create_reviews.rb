@@ -3,6 +3,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
     create_table :reviews do |t|
       t.string :commentaire
       t.integer :note
+      t.integer :restaurant_id
 
       t.timestamps
     end
